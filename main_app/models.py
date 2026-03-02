@@ -32,7 +32,7 @@ class Device(models.Model):
         return f"{self.name} ({self.get_category_display()})"
 
     def usage_sessions_today(self):
-        return self.usage_session_set.filter(date=date.today()).count()
+        return self.usagesession_set.filter(date=date.today()).count()
 
 class UsageSession(models.Model):
     date = models.DateField('Usage Date')
